@@ -35,11 +35,27 @@ Then open your browser and go to `http://localhost:5000`.
 
 ```
 wally/
-├── app.py              # Flask application
-├── model/              # Fine-tuned model weights
-├── history/            # Experiment JSON history files
-├── graphs/             # Generated experiment graphs
-├── templates/          # HTML templates
-├── static/             # CSS, JS, assets
-└── requirements.txt    # Python dependencies
+├── app/
+│   ├── app.py              # Flask application
+│   ├── deploy.py           # Model loading and inference
+│   ├── templates/          # HTML templates
+│   └── static/
+│       ├── css/            # Stylesheets
+│       ├── js/             # JavaScript
+│       └── images/         # Static assets
+├── src/
+│   └── wally.ipynb         # Training notebook
+├── history/
+│   ├── wally/              # Experiment JSON history files
+│   └── baseline/           # Baseline JSON history files
+├── graphs/
+│   ├── wally/              # Generated experiment graphs
+│   └── baseline/           # Baseline graphs
+├── data/
+│   └── *.csv               # Dataset files
+├── best_model/
+│   └── wally_100e..._1e-05lr.pth  # Fine-tuned model weights, experiment 5
+├── requirements.txt        # Python dependencies
+├── pyproject.toml          # Project configuration
+└── README.md
 ```
